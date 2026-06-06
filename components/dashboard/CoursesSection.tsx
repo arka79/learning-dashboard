@@ -1,10 +1,11 @@
+import type { Course } from "@/types";
 import { getCourses } from "@/lib/data";
 import CourseCard from "@/components/dashboard/CourseCard";
 import ErrorTile from "@/components/ui/ErrorTile";
 import { BentoItem } from "@/components/dashboard/BentoGrid";
 
 export default async function CoursesSection() {
-  let courses;
+  let courses : Course[] = [] ;
   let error: string | null = null;
 
   try {
